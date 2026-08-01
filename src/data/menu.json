@@ -1,0 +1,1736 @@
+[
+  {
+    "id": 1,
+    "name": "Truffle Burrata Crostini",
+    "category": "Appetizers",
+    "price": 22,
+    "veg": true,
+    "description": "Truffle Burrata Crostini — a signature composition of burrata and black truffle, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/truffle,appetizers,food,gourmet?lock=1",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#ff7a3d"
+    },
+    "nutrition": {
+      "calories": 404,
+      "protein": 16,
+      "carbs": 29,
+      "fat": 5
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Burrata",
+      "Black truffle",
+      "Sourdough",
+      "Basil oil",
+      "Sea salt"
+    ],
+    "allergens": [
+      "Dairy",
+      "Egg",
+      "Sesame"
+    ],
+    "rating": 4.2,
+    "reviewCount": 122,
+    "reviews": [
+      {
+        "id": "1-r1",
+        "author": "Talia G.",
+        "rating": 4,
+        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "date": "2026-02-11"
+      },
+      {
+        "id": "1-r2",
+        "author": "Owen C.",
+        "rating": 4,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-01-12"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 12,
+    "cookingTime": 36
+  },
+  {
+    "id": 2,
+    "name": "Seared Scallop Ceviche",
+    "category": "Appetizers",
+    "price": 26,
+    "veg": false,
+    "description": "Seared Scallop Ceviche — a signature composition of scallops and lime, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/seared,appetizers,food,gourmet?lock=2",
+    "model3d": {
+      "shape": "cone",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 795,
+      "protein": 9,
+      "carbs": 23,
+      "fat": 8
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Scallops",
+      "Lime",
+      "Chili",
+      "Coriander",
+      "Avocado"
+    ],
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "rating": 3.8,
+    "reviewCount": 193,
+    "reviews": [
+      {
+        "id": "2-r1",
+        "author": "Mei L.",
+        "rating": 3.5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-02-10"
+      },
+      {
+        "id": "2-r2",
+        "author": "Kenji T.",
+        "rating": 3.5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-01-11"
+      },
+      {
+        "id": "2-r3",
+        "author": "Diego M.",
+        "rating": 4,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-07-12"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 23,
+    "cookingTime": 23
+  },
+  {
+    "id": 3,
+    "name": "Wagyu Beef Tartare",
+    "category": "Appetizers",
+    "price": 28,
+    "veg": false,
+    "description": "Wagyu Beef Tartare — a signature composition of wagyu beef and quail egg, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/wagyu,appetizers,food,gourmet?lock=3",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 712,
+      "protein": 26,
+      "carbs": 38,
+      "fat": 19
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Wagyu beef",
+      "Quail egg",
+      "Capers",
+      "Shallot",
+      "Brioche"
+    ],
+    "allergens": [
+      "Egg"
+    ],
+    "rating": 3.9,
+    "reviewCount": 210,
+    "reviews": [
+      {
+        "id": "3-r1",
+        "author": "Freya A.",
+        "rating": 4,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-05-03"
+      },
+      {
+        "id": "3-r2",
+        "author": "Marco B.",
+        "rating": 4,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-04-04"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 20,
+    "cookingTime": 28
+  },
+  {
+    "id": 4,
+    "name": "Charred Octopus & Chorizo",
+    "category": "Appetizers",
+    "price": 24,
+    "veg": false,
+    "description": "Charred Octopus & Chorizo — a signature composition of octopus and chorizo, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/charred,appetizers,food,gourmet?lock=4",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 530,
+      "protein": 40,
+      "carbs": 54,
+      "fat": 18
+    },
+    "spiceLevel": 2,
+    "ingredients": [
+      "Octopus",
+      "Chorizo",
+      "Smoked paprika",
+      "Potato",
+      "Aioli"
+    ],
+    "allergens": [
+      "Egg",
+      "Dairy",
+      "Nuts"
+    ],
+    "rating": 4.9,
+    "reviewCount": 248,
+    "reviews": [
+      {
+        "id": "4-r1",
+        "author": "Marco B.",
+        "rating": 5,
+        "comment": "One of the best dishes I've had this year. Will order again.",
+        "date": "2026-05-17"
+      },
+      {
+        "id": "4-r2",
+        "author": "Isaac W.",
+        "rating": 5,
+        "comment": "The texture was spot on — crisp outside, tender within.",
+        "date": "2026-04-18"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 18,
+    "cookingTime": 37
+  },
+  {
+    "id": 5,
+    "name": "Roasted Beet & Goat Cheese",
+    "category": "Soups & Salads",
+    "price": 18,
+    "veg": true,
+    "description": "Roasted Beet & Goat Cheese — a signature composition of golden beets and goat cheese, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/roasted,soups,food,gourmet?lock=5",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 300,
+      "protein": 14,
+      "carbs": 34,
+      "fat": 23
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Golden beets",
+      "Goat cheese",
+      "Walnuts",
+      "Arugula",
+      "Honey vinaigrette"
+    ],
+    "allergens": [
+      "Sesame"
+    ],
+    "rating": 3.8,
+    "reviewCount": 18,
+    "reviews": [
+      {
+        "id": "5-r1",
+        "author": "Amara N.",
+        "rating": 4,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-07-03"
+      },
+      {
+        "id": "5-r2",
+        "author": "Nadia H.",
+        "rating": 4,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-06-04"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 8,
+    "cookingTime": 10
+  },
+  {
+    "id": 6,
+    "name": "Wild Mushroom Bisque",
+    "category": "Soups & Salads",
+    "price": 16,
+    "veg": true,
+    "description": "Wild Mushroom Bisque — a signature composition of porcini and cream, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/wild,soups,food,gourmet?lock=6",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 487,
+      "protein": 11,
+      "carbs": 44,
+      "fat": 20
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Porcini",
+      "Cream",
+      "Thyme",
+      "Truffle oil",
+      "Chives"
+    ],
+    "allergens": [
+      "Shellfish"
+    ],
+    "rating": 4.5,
+    "reviewCount": 105,
+    "reviews": [
+      {
+        "id": "6-r1",
+        "author": "Freya A.",
+        "rating": 4.5,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-04-18"
+      },
+      {
+        "id": "6-r2",
+        "author": "Marco B.",
+        "rating": 4.5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-03-19"
+      },
+      {
+        "id": "6-r3",
+        "author": "Isaac W.",
+        "rating": 4.5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-02-20"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 15,
+    "cookingTime": 31
+  },
+  {
+    "id": 7,
+    "name": "Heirloom Tomato Burrata Salad",
+    "category": "Soups & Salads",
+    "price": 19,
+    "veg": true,
+    "description": "Heirloom Tomato Burrata Salad — a signature composition of heirloom tomato and burrata, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/heirloom,soups,food,gourmet?lock=7",
+    "model3d": {
+      "shape": "cone",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 795,
+      "protein": 31,
+      "carbs": 17,
+      "fat": 20
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Heirloom tomato",
+      "Burrata",
+      "Basil",
+      "Aged balsamic",
+      "Olive oil"
+    ],
+    "allergens": [
+      "Nuts",
+      "Soy",
+      "Dairy"
+    ],
+    "rating": 5,
+    "reviewCount": 113,
+    "reviews": [
+      {
+        "id": "7-r1",
+        "author": "Marco B.",
+        "rating": 5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-03-26"
+      },
+      {
+        "id": "7-r2",
+        "author": "Isaac W.",
+        "rating": 5,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-02-03"
+      },
+      {
+        "id": "7-r3",
+        "author": "Elena V.",
+        "rating": 4.5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-01-04"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 23,
+    "cookingTime": 33
+  },
+  {
+    "id": 8,
+    "name": "Lobster Bisque",
+    "category": "Soups & Salads",
+    "price": 21,
+    "veg": false,
+    "description": "Lobster Bisque — a signature composition of lobster and cognac, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/lobster,soups,food,gourmet?lock=8",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 808,
+      "protein": 8,
+      "carbs": 47,
+      "fat": 11
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Lobster",
+      "Cognac",
+      "Cream",
+      "Tarragon",
+      "Paprika"
+    ],
+    "allergens": [
+      "Gluten"
+    ],
+    "rating": 3.9,
+    "reviewCount": 186,
+    "reviews": [
+      {
+        "id": "8-r1",
+        "author": "Kenji T.",
+        "rating": 3.5,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-01-03"
+      },
+      {
+        "id": "8-r2",
+        "author": "Diego M.",
+        "rating": 4,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-07-04"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": true,
+    "prepTime": 16,
+    "cookingTime": 22
+  },
+  {
+    "id": 9,
+    "name": "Herb-Crusted Rack of Lamb",
+    "category": "Main Course",
+    "price": 46,
+    "veg": false,
+    "description": "Herb-Crusted Rack of Lamb — a signature composition of lamb rack and rosemary, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/herbcrusted,main,food,gourmet?lock=9",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 876,
+      "protein": 26,
+      "carbs": 24,
+      "fat": 12
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Lamb rack",
+      "Rosemary",
+      "Dijon",
+      "Breadcrumb",
+      "Red wine jus"
+    ],
+    "allergens": [
+      "Egg"
+    ],
+    "rating": 4.8,
+    "reviewCount": 54,
+    "reviews": [
+      {
+        "id": "9-r1",
+        "author": "Elena V.",
+        "rating": 5,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-05-15"
+      },
+      {
+        "id": "9-r2",
+        "author": "Talia G.",
+        "rating": 5,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-04-16"
+      }
+    ],
+    "availability": "limited",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 24,
+    "cookingTime": 19
+  },
+  {
+    "id": 10,
+    "name": "Filet Mignon with Bordelaise",
+    "category": "Main Course",
+    "price": 52,
+    "veg": false,
+    "description": "Filet Mignon with Bordelaise — a signature composition of beef filet and bordelaise sauce, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/filet,main,food,gourmet?lock=10",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 408,
+      "protein": 42,
+      "carbs": 16,
+      "fat": 18
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Beef filet",
+      "Bordelaise sauce",
+      "Roasted garlic",
+      "Bone marrow",
+      "Thyme"
+    ],
+    "allergens": [
+      "Sesame",
+      "Gluten"
+    ],
+    "rating": 4.1,
+    "reviewCount": 166,
+    "reviews": [
+      {
+        "id": "10-r1",
+        "author": "Isaac W.",
+        "rating": 4.5,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-07-07"
+      },
+      {
+        "id": "10-r2",
+        "author": "Elena V.",
+        "rating": 4.5,
+        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "date": "2026-06-08"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 16,
+    "cookingTime": 17
+  },
+  {
+    "id": 11,
+    "name": "Miso-Glazed Black Cod",
+    "category": "Main Course",
+    "price": 42,
+    "veg": false,
+    "description": "Miso-Glazed Black Cod — a signature composition of black cod and white miso, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/misoglazed,main,food,gourmet?lock=11",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 393,
+      "protein": 41,
+      "carbs": 43,
+      "fat": 9
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Black cod",
+      "White miso",
+      "Mirin",
+      "Bok choy",
+      "Scallion"
+    ],
+    "allergens": [
+      "Soy"
+    ],
+    "rating": 3.9,
+    "reviewCount": 171,
+    "reviews": [
+      {
+        "id": "11-r1",
+        "author": "Kenji T.",
+        "rating": 4,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-06-12"
+      },
+      {
+        "id": "11-r2",
+        "author": "Diego M.",
+        "rating": 4,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-05-13"
+      },
+      {
+        "id": "11-r3",
+        "author": "Priya S.",
+        "rating": 4,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-04-14"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 21,
+    "cookingTime": 18
+  },
+  {
+    "id": 12,
+    "name": "Duck Breast à l'Orange",
+    "category": "Main Course",
+    "price": 38,
+    "veg": false,
+    "description": "Duck Breast à l'Orange — a signature composition of duck breast and orange, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/duck,main,food,gourmet?lock=12",
+    "model3d": {
+      "shape": "cone",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 705,
+      "protein": 39,
+      "carbs": 14,
+      "fat": 10
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Duck breast",
+      "Orange",
+      "Star anise",
+      "Cointreau",
+      "Fondant potato"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Sesame"
+    ],
+    "rating": 4.1,
+    "reviewCount": 103,
+    "reviews": [
+      {
+        "id": "12-r1",
+        "author": "Mei L.",
+        "rating": 4,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-04-16"
+      },
+      {
+        "id": "12-r2",
+        "author": "Kenji T.",
+        "rating": 4,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-03-17"
+      },
+      {
+        "id": "12-r3",
+        "author": "Diego M.",
+        "rating": 4,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-02-18"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 13,
+    "cookingTime": 31
+  },
+  {
+    "id": 13,
+    "name": "Wild Mushroom Wellington",
+    "category": "Main Course",
+    "price": 34,
+    "veg": true,
+    "description": "Wild Mushroom Wellington — a signature composition of puff pastry and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/wild,main,food,gourmet?lock=13",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 373,
+      "protein": 23,
+      "carbs": 30,
+      "fat": 4
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Puff pastry",
+      "Wild mushroom",
+      "Spinach",
+      "Chestnut",
+      "Truffle jus"
+    ],
+    "allergens": [
+      "Dairy"
+    ],
+    "rating": 4.7,
+    "reviewCount": 51,
+    "reviews": [
+      {
+        "id": "13-r1",
+        "author": "Kenji T.",
+        "rating": 4.5,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-02-12"
+      },
+      {
+        "id": "13-r2",
+        "author": "Diego M.",
+        "rating": 4.5,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-01-13"
+      },
+      {
+        "id": "13-r3",
+        "author": "Priya S.",
+        "rating": 5,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-07-14"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 21,
+    "cookingTime": 18
+  },
+  {
+    "id": 14,
+    "name": "Saffron Risotto al Nero",
+    "category": "Pasta & Risotto",
+    "price": 32,
+    "veg": false,
+    "description": "Saffron Risotto al Nero — a signature composition of squid ink and saffron, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/saffron,pasta,food,gourmet?lock=14",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 400,
+      "protein": 12,
+      "carbs": 15,
+      "fat": 33
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Squid ink",
+      "Saffron",
+      "Arborio rice",
+      "Calamari",
+      "Parmesan"
+    ],
+    "allergens": [
+      "Egg",
+      "Nuts"
+    ],
+    "rating": 4.2,
+    "reviewCount": 58,
+    "reviews": [
+      {
+        "id": "14-r1",
+        "author": "Mei L.",
+        "rating": 4.5,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-05-19"
+      },
+      {
+        "id": "14-r2",
+        "author": "Kenji T.",
+        "rating": 4,
+        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "date": "2026-04-20"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 8,
+    "cookingTime": 20
+  },
+  {
+    "id": 15,
+    "name": "Truffle Tagliatelle",
+    "category": "Pasta & Risotto",
+    "price": 36,
+    "veg": true,
+    "description": "Truffle Tagliatelle — a signature composition of tagliatelle and black truffle, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/truffle,pasta,food,gourmet?lock=15",
+    "model3d": {
+      "shape": "cone",
+      "accent": "#e33f3f"
+    },
+    "nutrition": {
+      "calories": 382,
+      "protein": 8,
+      "carbs": 27,
+      "fat": 11
+    },
+    "spiceLevel": 2,
+    "ingredients": [
+      "Tagliatelle",
+      "Black truffle",
+      "Parmesan",
+      "Butter",
+      "Egg yolk"
+    ],
+    "allergens": [
+      "Gluten"
+    ],
+    "rating": 4,
+    "reviewCount": 60,
+    "reviews": [
+      {
+        "id": "15-r1",
+        "author": "Freya A.",
+        "rating": 3.5,
+        "comment": "The texture was spot on — crisp outside, tender within.",
+        "date": "2026-01-21"
+      },
+      {
+        "id": "15-r2",
+        "author": "Marco B.",
+        "rating": 4.5,
+        "comment": "Great depth of flavor without being overly heavy.",
+        "date": "2026-07-22"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": true,
+    "prepTime": 10,
+    "cookingTime": 20
+  },
+  {
+    "id": 16,
+    "name": "Wild Mushroom Risotto",
+    "category": "Pasta & Risotto",
+    "price": 29,
+    "veg": true,
+    "description": "Wild Mushroom Risotto — a signature composition of arborio rice and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/wild,pasta,food,gourmet?lock=16",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 282,
+      "protein": 26,
+      "carbs": 41,
+      "fat": 19
+    },
+    "spiceLevel": 2,
+    "ingredients": [
+      "Arborio rice",
+      "Wild mushroom",
+      "Parmesan",
+      "White wine",
+      "Thyme"
+    ],
+    "allergens": [
+      "Egg"
+    ],
+    "rating": 4.6,
+    "reviewCount": 60,
+    "reviews": [
+      {
+        "id": "16-r1",
+        "author": "Freya A.",
+        "rating": 4.5,
+        "comment": "The texture was spot on — crisp outside, tender within.",
+        "date": "2026-05-21"
+      },
+      {
+        "id": "16-r2",
+        "author": "Marco B.",
+        "rating": 4.5,
+        "comment": "Great depth of flavor without being overly heavy.",
+        "date": "2026-04-22"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 10,
+    "cookingTime": 20
+  },
+  {
+    "id": 17,
+    "name": "Lobster Ravioli",
+    "category": "Pasta & Risotto",
+    "price": 39,
+    "veg": false,
+    "description": "Lobster Ravioli — a signature composition of lobster and ricotta, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/lobster,pasta,food,gourmet?lock=17",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 459,
+      "protein": 41,
+      "carbs": 50,
+      "fat": 27
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Lobster",
+      "Ricotta",
+      "Saffron cream",
+      "Chive",
+      "Fresh pasta"
+    ],
+    "allergens": [
+      "Soy"
+    ],
+    "rating": 3.8,
+    "reviewCount": 57,
+    "reviews": [
+      {
+        "id": "17-r1",
+        "author": "Julian F.",
+        "rating": 4,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-06-18"
+      },
+      {
+        "id": "17-r2",
+        "author": "Sofia R.",
+        "rating": 4,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-05-19"
+      },
+      {
+        "id": "17-r3",
+        "author": "Mei L.",
+        "rating": 4,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-04-20"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 27,
+    "cookingTime": 19
+  },
+  {
+    "id": 18,
+    "name": "Butternut Squash Agnolotti",
+    "category": "Pasta & Risotto",
+    "price": 30,
+    "veg": true,
+    "description": "Butternut Squash Agnolotti — a signature composition of butternut squash and sage, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/butternut,pasta,food,gourmet?lock=18",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#e33f3f"
+    },
+    "nutrition": {
+      "calories": 421,
+      "protein": 11,
+      "carbs": 32,
+      "fat": 9
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Butternut squash",
+      "Sage",
+      "Brown butter",
+      "Amaretti",
+      "Parmesan"
+    ],
+    "allergens": [
+      "Shellfish"
+    ],
+    "rating": 4.6,
+    "reviewCount": 99,
+    "reviews": [
+      {
+        "id": "18-r1",
+        "author": "Elena V.",
+        "rating": 4.5,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-04-12"
+      },
+      {
+        "id": "18-r2",
+        "author": "Talia G.",
+        "rating": 4.5,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-03-13"
+      },
+      {
+        "id": "18-r3",
+        "author": "Owen C.",
+        "rating": 4.5,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-02-14"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 9,
+    "cookingTime": 30
+  },
+  {
+    "id": 19,
+    "name": "Pan-Seared Chilean Sea Bass",
+    "category": "Seafood",
+    "price": 44,
+    "veg": false,
+    "description": "Pan-Seared Chilean Sea Bass — a signature composition of sea bass and beurre blanc, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/panseared,seafood,food,gourmet?lock=19",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 692,
+      "protein": 20,
+      "carbs": 38,
+      "fat": 10
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Sea bass",
+      "Beurre blanc",
+      "Fennel",
+      "Citrus",
+      "Micro herbs"
+    ],
+    "allergens": [
+      "Soy"
+    ],
+    "rating": 3.7,
+    "reviewCount": 150,
+    "reviews": [
+      {
+        "id": "19-r1",
+        "author": "Freya A.",
+        "rating": 4,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-06-15"
+      },
+      {
+        "id": "19-r2",
+        "author": "Marco B.",
+        "rating": 4,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-05-16"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 20,
+    "cookingTime": 13
+  },
+  {
+    "id": 20,
+    "name": "Grilled Tiger Prawns",
+    "category": "Seafood",
+    "price": 36,
+    "veg": false,
+    "description": "Grilled Tiger Prawns — a signature composition of tiger prawns and garlic butter, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/grilled,seafood,food,gourmet?lock=20",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 653,
+      "protein": 23,
+      "carbs": 30,
+      "fat": 27
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Tiger prawns",
+      "Garlic butter",
+      "Chili",
+      "Lemon",
+      "Parsley"
+    ],
+    "allergens": [
+      "Dairy"
+    ],
+    "rating": 4.7,
+    "reviewCount": 51,
+    "reviews": [
+      {
+        "id": "20-r1",
+        "author": "Kenji T.",
+        "rating": 4.5,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-02-12"
+      },
+      {
+        "id": "20-r2",
+        "author": "Diego M.",
+        "rating": 4.5,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-01-13"
+      },
+      {
+        "id": "20-r3",
+        "author": "Priya S.",
+        "rating": 5,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-07-14"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 21,
+    "cookingTime": 18
+  },
+  {
+    "id": 21,
+    "name": "Maine Lobster Thermidor",
+    "category": "Seafood",
+    "price": 58,
+    "veg": false,
+    "description": "Maine Lobster Thermidor — a signature composition of lobster and brandy cream, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/maine,seafood,food,gourmet?lock=21",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 663,
+      "protein": 21,
+      "carbs": 16,
+      "fat": 15
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Lobster",
+      "Brandy cream",
+      "Gruyère",
+      "Mustard",
+      "Tarragon"
+    ],
+    "allergens": [
+      "Sesame",
+      "Soy"
+    ],
+    "rating": 4.4,
+    "reviewCount": 181,
+    "reviews": [
+      {
+        "id": "21-r1",
+        "author": "Isaac W.",
+        "rating": 4.5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-07-22"
+      },
+      {
+        "id": "21-r2",
+        "author": "Elena V.",
+        "rating": 4.5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-06-23"
+      },
+      {
+        "id": "21-r3",
+        "author": "Talia G.",
+        "rating": 4.5,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-05-24"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 11,
+    "cookingTime": 20
+  },
+  {
+    "id": 22,
+    "name": "Seared Ahi Tuna",
+    "category": "Seafood",
+    "price": 32,
+    "veg": false,
+    "description": "Seared Ahi Tuna — a signature composition of ahi tuna and sesame crust, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/seared,seafood,food,gourmet?lock=22",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 536,
+      "protein": 28,
+      "carbs": 22,
+      "fat": 26
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Ahi tuna",
+      "Sesame crust",
+      "Wasabi aioli",
+      "Pickled ginger",
+      "Soy glaze"
+    ],
+    "allergens": [
+      "Sesame",
+      "Shellfish",
+      "Nuts"
+    ],
+    "rating": 4.4,
+    "reviewCount": 194,
+    "reviews": [
+      {
+        "id": "22-r1",
+        "author": "Diego M.",
+        "rating": 4.5,
+        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "date": "2026-07-11"
+      },
+      {
+        "id": "22-r2",
+        "author": "Priya S.",
+        "rating": 4.5,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-06-12"
+      }
+    ],
+    "availability": "limited",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 24,
+    "cookingTime": 24
+  },
+  {
+    "id": 23,
+    "name": "Smoked Wagyu Short Rib",
+    "category": "Grill & BBQ",
+    "price": 48,
+    "veg": false,
+    "description": "Smoked Wagyu Short Rib — a signature composition of wagyu short rib and smoked paprika, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/smoked,grill,food,gourmet?lock=23",
+    "model3d": {
+      "shape": "cone",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 669,
+      "protein": 15,
+      "carbs": 42,
+      "fat": 5
+    },
+    "spiceLevel": 1,
+    "ingredients": [
+      "Wagyu short rib",
+      "Smoked paprika",
+      "Bourbon glaze",
+      "Root vegetables"
+    ],
+    "allergens": [
+      "Gluten",
+      "Sesame"
+    ],
+    "rating": 4.1,
+    "reviewCount": 247,
+    "reviews": [
+      {
+        "id": "23-r1",
+        "author": "Priya S.",
+        "rating": 4,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-01-16"
+      },
+      {
+        "id": "23-r2",
+        "author": "Freya A.",
+        "rating": 4.5,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-07-17"
+      },
+      {
+        "id": "23-r3",
+        "author": "Marco B.",
+        "rating": 4.5,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-06-18"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": true,
+    "prepTime": 17,
+    "cookingTime": 37
+  },
+  {
+    "id": 24,
+    "name": "Applewood Grilled Ribeye",
+    "category": "Grill & BBQ",
+    "price": 56,
+    "veg": false,
+    "description": "Applewood Grilled Ribeye — a signature composition of ribeye and applewood smoke, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/applewood,grill,food,gourmet?lock=24",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#d4af37"
+    },
+    "nutrition": {
+      "calories": 762,
+      "protein": 46,
+      "carbs": 50,
+      "fat": 11
+    },
+    "spiceLevel": 2,
+    "ingredients": [
+      "Ribeye",
+      "Applewood smoke",
+      "Herb butter",
+      "Charred onion"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Sesame"
+    ],
+    "rating": 4.8,
+    "reviewCount": 20,
+    "reviews": [
+      {
+        "id": "24-r1",
+        "author": "Sofia R.",
+        "rating": 5,
+        "comment": "One of the best dishes I've had this year. Will order again.",
+        "date": "2026-04-05"
+      },
+      {
+        "id": "24-r2",
+        "author": "Mei L.",
+        "rating": 4.5,
+        "comment": "The texture was spot on — crisp outside, tender within.",
+        "date": "2026-03-06"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": false,
+    "isNew": false,
+    "prepTime": 10,
+    "cookingTime": 10
+  },
+  {
+    "id": 25,
+    "name": "Charcoal Grilled Chicken",
+    "category": "Grill & BBQ",
+    "price": 28,
+    "veg": false,
+    "description": "Charcoal Grilled Chicken — a signature composition of chicken and charcoal grill, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/charcoal,grill,food,gourmet?lock=25",
+    "model3d": {
+      "shape": "torus",
+      "accent": "#ff7a3d"
+    },
+    "nutrition": {
+      "calories": 391,
+      "protein": 35,
+      "carbs": 11,
+      "fat": 15
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Chicken",
+      "Charcoal grill",
+      "Lemon herb marinade",
+      "Chimichurri"
+    ],
+    "allergens": [
+      "Sesame"
+    ],
+    "rating": 4.7,
+    "reviewCount": 129,
+    "reviews": [
+      {
+        "id": "25-r1",
+        "author": "Elena V.",
+        "rating": 5,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-07-18"
+      },
+      {
+        "id": "25-r2",
+        "author": "Talia G.",
+        "rating": 5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-06-19"
+      },
+      {
+        "id": "25-r3",
+        "author": "Owen C.",
+        "rating": 5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-05-20"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 19,
+    "cookingTime": 37
+  },
+  {
+    "id": 26,
+    "name": "Smoked Portobello Steak",
+    "category": "Grill & BBQ",
+    "price": 24,
+    "veg": true,
+    "description": "Smoked Portobello Steak — a signature composition of portobello and smoked salt, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/smoked,grill,food,gourmet?lock=26",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#ff7a3d"
+    },
+    "nutrition": {
+      "calories": 539,
+      "protein": 39,
+      "carbs": 52,
+      "fat": 5
+    },
+    "spiceLevel": 3,
+    "ingredients": [
+      "Portobello",
+      "Smoked salt",
+      "Herb oil",
+      "Roasted garlic"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Sesame"
+    ],
+    "rating": 4.2,
+    "reviewCount": 217,
+    "reviews": [
+      {
+        "id": "26-r1",
+        "author": "Priya S.",
+        "rating": 4,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-04-10"
+      },
+      {
+        "id": "26-r2",
+        "author": "Freya A.",
+        "rating": 4,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-03-11"
+      },
+      {
+        "id": "26-r3",
+        "author": "Marco B.",
+        "rating": 4,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-02-12"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 27,
+    "cookingTime": 29
+  },
+  {
+    "id": 27,
+    "name": "Valrhona Chocolate Fondant",
+    "category": "Desserts",
+    "price": 16,
+    "veg": true,
+    "description": "Valrhona Chocolate Fondant — a signature composition of valrhona chocolate and vanilla bean ice cream, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/valrhona,desserts,food,gourmet?lock=27",
+    "model3d": {
+      "shape": "sphere",
+      "accent": "#e33f3f"
+    },
+    "nutrition": {
+      "calories": 643,
+      "protein": 27,
+      "carbs": 29,
+      "fat": 36
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Valrhona chocolate",
+      "Vanilla bean ice cream",
+      "Raspberry coulis"
+    ],
+    "allergens": [
+      "Soy",
+      "Dairy"
+    ],
+    "rating": 4.6,
+    "reviewCount": 241,
+    "reviews": [
+      {
+        "id": "27-r1",
+        "author": "Isaac W.",
+        "rating": 5,
+        "comment": "Elegant presentation, and it tasted even better than it looked.",
+        "date": "2026-06-10"
+      },
+      {
+        "id": "27-r2",
+        "author": "Elena V.",
+        "rating": 4.5,
+        "comment": "My dinner companion and I both agreed this was the highlight of the night.",
+        "date": "2026-05-11"
+      },
+      {
+        "id": "27-r3",
+        "author": "Talia G.",
+        "rating": 4.5,
+        "comment": "Perfectly cooked and generously portioned. Worth every penny.",
+        "date": "2026-04-12"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 11,
+    "cookingTime": 35
+  },
+  {
+    "id": 28,
+    "name": "Crème Brûlée",
+    "category": "Desserts",
+    "price": 14,
+    "veg": true,
+    "description": "Crème Brûlée — a signature composition of vanilla bean and cream, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/crme,desserts,food,gourmet?lock=28",
+    "model3d": {
+      "shape": "dome",
+      "accent": "#ff7a3d"
+    },
+    "nutrition": {
+      "calories": 360,
+      "protein": 20,
+      "carbs": 37,
+      "fat": 24
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Vanilla bean",
+      "Cream",
+      "Egg yolk",
+      "Caramelized sugar"
+    ],
+    "allergens": [
+      "Soy"
+    ],
+    "rating": 4,
+    "reviewCount": 78,
+    "reviews": [
+      {
+        "id": "28-r1",
+        "author": "Amara N.",
+        "rating": 4,
+        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "date": "2026-06-15"
+      },
+      {
+        "id": "28-r2",
+        "author": "Nadia H.",
+        "rating": 4,
+        "comment": "A little pricey, but the quality justifies it completely.",
+        "date": "2026-05-16"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": true,
+    "popular": true,
+    "isNew": false,
+    "prepTime": 8,
+    "cookingTime": 25
+  },
+  {
+    "id": 29,
+    "name": "Deconstructed Tiramisu",
+    "category": "Desserts",
+    "price": 15,
+    "veg": true,
+    "description": "Deconstructed Tiramisu — a signature composition of mascarpone and espresso, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/deconstructed,desserts,food,gourmet?lock=29",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#e9cd7a"
+    },
+    "nutrition": {
+      "calories": 325,
+      "protein": 15,
+      "carbs": 19,
+      "fat": 32
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Mascarpone",
+      "Espresso",
+      "Cocoa",
+      "Ladyfinger",
+      "Marsala"
+    ],
+    "allergens": [
+      "Gluten",
+      "Egg"
+    ],
+    "rating": 4.7,
+    "reviewCount": 223,
+    "reviews": [
+      {
+        "id": "29-r1",
+        "author": "Mei L.",
+        "rating": 4.5,
+        "comment": "Beautifully balanced flavors, and the plating was a work of art.",
+        "date": "2026-01-16"
+      },
+      {
+        "id": "29-r2",
+        "author": "Kenji T.",
+        "rating": 5,
+        "comment": "Rich, comforting, and expertly seasoned from first bite to last.",
+        "date": "2026-07-17"
+      },
+      {
+        "id": "29-r3",
+        "author": "Diego M.",
+        "rating": 5,
+        "comment": "Fresh ingredients really shine through here.",
+        "date": "2026-06-18"
+      }
+    ],
+    "availability": "limited",
+    "chefSpecial": true,
+    "popular": true,
+    "isNew": true,
+    "prepTime": 13,
+    "cookingTime": 31
+  },
+  {
+    "id": 30,
+    "name": "Golden Saffron Old Fashioned",
+    "category": "Beverages",
+    "price": 19,
+    "veg": true,
+    "description": "Golden Saffron Old Fashioned — a signature composition of bourbon and saffron syrup, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://loremflickr.com/800/600/golden,beverages,food,gourmet?lock=30",
+    "model3d": {
+      "shape": "ring",
+      "accent": "#c98a3e"
+    },
+    "nutrition": {
+      "calories": 854,
+      "protein": 36,
+      "carbs": 33,
+      "fat": 35
+    },
+    "spiceLevel": 0,
+    "ingredients": [
+      "Bourbon",
+      "Saffron syrup",
+      "Orange bitters",
+      "Smoked orange peel"
+    ],
+    "allergens": [],
+    "rating": 3.7,
+    "reviewCount": 172,
+    "reviews": [
+      {
+        "id": "30-r1",
+        "author": "Priya S.",
+        "rating": 3.5,
+        "comment": "Great depth of flavor without being overly heavy.",
+        "date": "2026-01-13"
+      },
+      {
+        "id": "30-r2",
+        "author": "Freya A.",
+        "rating": 4,
+        "comment": "One of the best dishes I've had this year. Will order again.",
+        "date": "2026-07-14"
+      }
+    ],
+    "availability": "available",
+    "chefSpecial": false,
+    "popular": false,
+    "isNew": true,
+    "prepTime": 22,
+    "cookingTime": 18
+  }
+]
