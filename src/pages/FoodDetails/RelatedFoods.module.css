@@ -1,0 +1,57 @@
+.section {
+  padding-block: var(--space-9) var(--space-11);
+}
+
+.title {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-7);
+  font-size: clamp(1.5rem, 4vw, var(--fs-3xl));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.cardLink {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.name {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+.price {
+  margin-top: var(--space-1);
+  font-family: var(--font-accent);
+  font-weight: 600;
+  color: var(--color-gold-soft);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

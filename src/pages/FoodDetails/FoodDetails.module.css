@@ -1,0 +1,24 @@
+.page {
+  background: var(--color-bg);
+}
+
+.notFound {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: center;
+  padding-block: var(--space-11);
+}
+
+.notFoundTitle {
+  font-size: clamp(2rem, 5vw, var(--fs-4xl));
+}
+
+.notFoundText {
+  color: var(--color-text-muted);
+  max-width: 46ch;
+  margin-bottom: var(--space-3);
+}

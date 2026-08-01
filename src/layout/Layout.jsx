@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Header } from './Header'
@@ -13,6 +14,13 @@ const pageVariants = {
 export function Layout() {
   const location = useLocation()
   const { prefersReducedMotion } = useTheme()
+
+  // React Router doesn't reset scroll on navigation the way a full page
+  // load would — without this, e.g. clicking "Menu" from partway down the
+  // Home page lands you mid-scroll on the new page instead of at its top.
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   return (
     <>

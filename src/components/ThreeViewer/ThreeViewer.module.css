@@ -1,0 +1,30 @@
+.viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.canvasWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.canvasWrap canvas {
+  outline: none;
+  touch-action: none;
+}
+
+.fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fallbackImage {
+  height: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+}

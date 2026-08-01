@@ -1,8 +1,23 @@
+import { Hero } from './Hero'
+import { StatsStrip } from './StatsStrip'
+import { FeaturedDishes } from './FeaturedDishes'
+import { ChefSection } from './ChefSection'
+import { About } from './About'
+import { Gallery } from './Gallery'
+import { Testimonials } from './Testimonials'
+import { ClosingCTA } from './ClosingCTA'
+
 export function Home() {
   return (
-    <div className="container" style={{ paddingBlock: '6rem', textAlign: 'center' }}>
-      <h1>Aurum</h1>
-      <p style={{ color: 'var(--color-text-muted)', marginTop: '1rem' }}>Homepage under construction.</p>
-    </div>
+    <>
+      <Hero />
+      <StatsStrip />
+      <FeaturedDishes />
+      <ChefSection />
+      <About />
+      <Gallery />
+      <Testimonials />
+      <ClosingCTA />
+    </>
   )
 }
