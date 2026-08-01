@@ -1,0 +1,38 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-accent);
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 5px var(--space-3);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.gold {
+  background: rgba(212, 175, 55, 0.16);
+  color: var(--color-gold-soft);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.red {
+  background: rgba(227, 63, 63, 0.16);
+  color: #ff8f8f;
+  border-color: rgba(227, 63, 63, 0.35);
+}
+
+.success {
+  background: rgba(63, 181, 81, 0.16);
+  color: #7be08c;
+  border-color: rgba(63, 181, 81, 0.35);
+}
+
+.neutral {
+  background: var(--glass-bg);
+  color: var(--color-text-muted);
+  border-color: var(--glass-border);
+}

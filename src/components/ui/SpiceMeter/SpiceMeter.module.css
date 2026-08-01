@@ -1,0 +1,12 @@
+.meter {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.active {
+  color: var(--color-red);
+}
+
+.inactive {
+  color: var(--color-border-strong);
+}

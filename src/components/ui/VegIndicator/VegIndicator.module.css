@@ -1,0 +1,23 @@
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1.5px solid currentColor;
+  flex-shrink: 0;
+}
+
+.veg {
+  color: var(--color-veg);
+}
+
+.nonveg {
+  color: var(--color-nonveg);
+}
+
+.dot {
+  width: 45%;
+  height: 45%;
+  border-radius: 50%;
+  background: currentColor;
+}

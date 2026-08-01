@@ -1,0 +1,23 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-accent);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--color-gold);
+}
+
+.value {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.count {
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
