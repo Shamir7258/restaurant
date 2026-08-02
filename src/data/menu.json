@@ -9,7 +9,8 @@
     "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#ff7a3d"
+      "accent": "#ff7a3d",
+      "gltf": null
     },
     "nutrition": {
       "calories": 404,
@@ -65,7 +66,8 @@
     "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": "/models/avocado/Avocado.gltf"
     },
     "nutrition": {
       "calories": 795,
@@ -127,7 +129,8 @@
     "image": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 712,
@@ -181,7 +184,8 @@
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 530,
@@ -237,7 +241,8 @@
     "image": "https://images.unsplash.com/photo-1600335895229-6e75511892c8?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 300,
@@ -291,7 +296,8 @@
     "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 487,
@@ -352,7 +358,8 @@
     "image": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 795,
@@ -415,7 +422,8 @@
     "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 808,
@@ -469,7 +477,8 @@
     "image": "https://images.unsplash.com/photo-1631515242808-497c3fbd3972?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 876,
@@ -523,7 +532,8 @@
     "image": "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 408,
@@ -578,7 +588,8 @@
     "image": "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 393,
@@ -639,7 +650,8 @@
     "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": "/models/mandarin-orange/MandarinOrange.gltf"
     },
     "nutrition": {
       "calories": 705,
@@ -701,7 +713,8 @@
     "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 373,
@@ -762,7 +775,8 @@
     "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 400,
@@ -817,7 +831,8 @@
     "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
-      "accent": "#e33f3f"
+      "accent": "#e33f3f",
+      "gltf": null
     },
     "nutrition": {
       "calories": 382,
@@ -871,7 +886,8 @@
     "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 282,
@@ -925,7 +941,8 @@
     "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 459,
@@ -986,7 +1003,8 @@
     "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#e33f3f"
+      "accent": "#e33f3f",
+      "gltf": null
     },
     "nutrition": {
       "calories": 421,
@@ -1047,7 +1065,8 @@
     "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 692,
@@ -1101,7 +1120,8 @@
     "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 653,
@@ -1162,7 +1182,8 @@
     "image": "https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 663,
@@ -1224,7 +1245,8 @@
     "image": "https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 536,
@@ -1280,7 +1302,8 @@
     "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 669,
@@ -1341,7 +1364,8 @@
     "image": "https://images.unsplash.com/photo-1432139509613-5c4255815697?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#d4af37"
+      "accent": "#d4af37",
+      "gltf": null
     },
     "nutrition": {
       "calories": 762,
@@ -1396,7 +1420,8 @@
     "image": "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
-      "accent": "#ff7a3d"
+      "accent": "#ff7a3d",
+      "gltf": null
     },
     "nutrition": {
       "calories": 391,
@@ -1456,7 +1481,8 @@
     "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#ff7a3d"
+      "accent": "#ff7a3d",
+      "gltf": null
     },
     "nutrition": {
       "calories": 539,
@@ -1517,7 +1543,8 @@
     "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
-      "accent": "#e33f3f"
+      "accent": "#e33f3f",
+      "gltf": null
     },
     "nutrition": {
       "calories": 643,
@@ -1577,7 +1604,8 @@
     "image": "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
-      "accent": "#ff7a3d"
+      "accent": "#ff7a3d",
+      "gltf": null
     },
     "nutrition": {
       "calories": 360,
@@ -1630,7 +1658,8 @@
     "image": "https://images.unsplash.com/photo-1607478900766-efe13248b125?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#e9cd7a"
+      "accent": "#e9cd7a",
+      "gltf": null
     },
     "nutrition": {
       "calories": 325,
@@ -1692,7 +1721,8 @@
     "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
-      "accent": "#c98a3e"
+      "accent": "#c98a3e",
+      "gltf": null
     },
     "nutrition": {
       "calories": 854,

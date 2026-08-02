@@ -57,7 +57,21 @@ export function Footer() {
 
       <div className={['container', styles.bottom].join(' ')}>
         <p>© {new Date().getFullYear()} Aurum Restaurant. All rights reserved.</p>
-        <p className={styles.mockNote}>A UI mockup — mock data only.</p>
+        <p className={styles.mockNote}>
+          A UI mockup — mock data only. 3D models:{' '}
+          <a href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Avocado" target="_blank" rel="noreferrer noopener">
+            Avocado
+          </a>{' '}
+          (CC0), Mandarin Orange by{' '}
+          <a href="https://skfb.ly/EZNY" target="_blank" rel="noreferrer noopener">
+            zamdreamer
+          </a>
+          , glTF adaptation by Eric Chadwick (
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer noopener">
+            CC BY 4.0
+          </a>
+          ).
+        </p>
       </div>
     </footer>
   )

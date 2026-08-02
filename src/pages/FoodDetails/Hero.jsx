@@ -56,6 +56,7 @@ export function Hero({ item }) {
           <ThreeViewer
             shape={item.model3d?.shape}
             accent={item.model3d?.accent}
+            gltfUrl={item.model3d?.gltf}
             fallbackImage={item.image}
             fallbackAlt={item.name}
             autoRotate
