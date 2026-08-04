@@ -1,184 +1,40 @@
-import { Component, Suspense, useEffect, useMemo, useState } from 'react'
+import { Suspense, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Environment, ContactShadows, useGLTF } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Environment, ContactShadows, MeshReflectorMaterial, useGLTF } from '@react-three/drei'
+import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 import { OptimizedImage } from '../ui'
 import { useTheme } from '../../theme/ThemeProvider'
+import { useIsDesktop } from '../../hooks/useMediaQuery'
+import { ProceduralDish, hashSeed, mulberry32 } from '../../three/proceduralDish'
+import { hasWebGL, ThreeErrorBoundary } from '../../three/webgl'
 import styles from './ThreeViewer.module.css'
 
-/**
- * A handful of dishes carry a real, open-source glTF model (see
- * public/models/ — re-hosted at reduced texture size from Khronos'
- * glTF-Sample-Assets, CC0/CC-BY-4.0, only where the model's actual subject
- * matches the dish's real ingredients). Every other dish falls back to a
- * stylized procedural "dish" — no model exists for every possible menu item,
- * so each item's shape/accent from menu.json instead drives a generated
- * still-life (plate + a geometry standing in for the dish) lit with an HDRI
- * environment. Self-contained: nothing to fetch, nothing that can 404.
- *
- * The procedural base primitive per `shape` is only a silhouette — every
- * mesh gets its surface deformed into an irregular, lumpy mound (a handful
- * of smooth "bumps" at random-but-deterministic points, plus light micro-
- * noise) so it reads as a scoop/mound of food sitting on a plate rather than
- * a perfect geometric solid (which read as jewelry/sculpture, not a dish).
- */
-
-const SHAPE_CONFIG = {
-  sphere: { height: 1.55, baseRotation: [0, 0, 0] },
-  cone: { height: 1.25, baseRotation: [0, 0, 0] },
-  dome: { height: 0.95, baseRotation: [0, 0, 0] },
-  torus: { height: 0.62, baseRotation: [Math.PI / 2, 0, 0] },
-  ring: { height: 0.5, baseRotation: [Math.PI / 2, 0, 0] },
-}
-
-// bumpScale keeps displacement proportional to each shape's thinnest
-// dimension — a torus/ring's tube is much thinner than a sphere's radius,
-// so the same absolute displacement that reads as a gentle mound on a
-// sphere would push a torus's tube walls through each other.
-const SHAPE_GEOMETRY = {
-  torus: { build: () => new THREE.TorusGeometry(0.72, 0.34, 28, 56), bumpScale: 0.34 },
-  cone: { build: () => new THREE.ConeGeometry(0.82, 1.15, 40, 12), bumpScale: 0.82 },
-  dome: { build: () => new THREE.SphereGeometry(0.95, 40, 28, 0, Math.PI * 2, 0, Math.PI / 2), bumpScale: 0.95 },
-  ring: { build: () => new THREE.TorusGeometry(0.8, 0.24, 22, 48), bumpScale: 0.24 },
-  sphere: { build: () => new THREE.SphereGeometry(0.85, 40, 30), bumpScale: 0.85 },
-}
-
-function baseGeometryFor(shape) {
-  return (SHAPE_GEOMETRY[shape] || SHAPE_GEOMETRY.sphere).build()
-}
-
-/** Deterministic string -> int hash, used to seed everything below so the same dish always looks the same. */
-function hashSeed(seed) {
-  let hash = 0
-  for (let i = 0; i < seed.length; i++) {
-    hash = (hash << 5) - hash + seed.charCodeAt(i)
-    hash |= 0
-  }
-  return hash
-}
-
-/** Deterministic PRNG (mulberry32) — same seed always produces the same sequence. */
-function mulberry32(seed) {
-  let a = seed
-  return function next() {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
+// Categories where a rising-steam wisp would read as absurd (iced drinks, chilled desserts).
+const NO_STEAM_CATEGORIES = new Set(['Desserts', 'Beverages'])
+// A cold/cured dish can still land in a normally-hot category (e.g. ceviche and
+// tartare are both "Appetizers") — catch those by name rather than category alone.
+const COLD_DISH_KEYWORDS = ['ceviche', 'tartare', 'carpaccio', 'sashimi', 'chilled', 'salad']
 
 /**
- * Deforms `geometry` in place into an irregular, food-like mound: a few
- * smooth localized bumps (like a scoop that's been plated by hand) plus a
- * touch of fine surface noise (texture, not spikes). Displacement follows
- * each vertex's own normal, so it works for spheres, cones, and toruses alike.
+ * A handful of dishes carry a real glTF model (see public/models/ — each
+ * authored from scratch in Blender, scripted headlessly via bpy, composed
+ * of simple primitives + named PBR materials per component so the export
+ * stays lightweight — no baked textures to fetch). Every other dish falls
+ * back to a stylized procedural "dish" (see src/three/proceduralDish.js) —
+ * no model exists for every possible menu item, so each item's shape/accent
+ * from menu.json instead drives a generated still-life (plate + a geometry
+ * standing in for the dish) lit with an HDRI environment. Self-contained:
+ * nothing to fetch, nothing that can 404.
  */
-function makeLumpy(geometry, seedStr, bumpScale) {
-  const rand = mulberry32(hashSeed(seedStr) >>> 0)
-  const position = geometry.attributes.position
-  const normal = geometry.attributes.normal
-  const v = new THREE.Vector3()
-  const n = new THREE.Vector3()
-  const dir = new THREE.Vector3()
-
-  const bumps = Array.from({ length: 4 + Math.floor(rand() * 3) }, () => ({
-    theta: rand() * Math.PI * 2,
-    phi: rand() * Math.PI,
-    strength: (0.075 + rand() * 0.11) * bumpScale,
-    falloff: 2 + rand() * 3,
-  }))
-
-  // Fine surface ripple, kept as a smooth function of position (not vertex
-  // index) so vertices that share a position — a torus/sphere UV seam, a
-  // cone's apex — pick up an identical offset instead of tearing apart.
-  const rippleFreq = 5 + rand() * 3
-  const ripplePhase = new THREE.Vector3(rand(), rand(), rand()).multiplyScalar(Math.PI * 2)
-  const rippleAmp = 0.05 * bumpScale
-
-  for (let i = 0; i < position.count; i++) {
-    v.fromBufferAttribute(position, i)
-    n.fromBufferAttribute(normal, i)
-    dir.copy(v).normalize()
-
-    let offset = 0
-    for (const bump of bumps) {
-      const bumpDir = new THREE.Vector3(
-        Math.sin(bump.phi) * Math.cos(bump.theta),
-        Math.cos(bump.phi),
-        Math.sin(bump.phi) * Math.sin(bump.theta),
-      )
-      const influence = Math.max(0, dir.dot(bumpDir)) ** bump.falloff
-      offset += influence * bump.strength
-    }
-
-    offset +=
-      rippleAmp *
-      Math.sin(dir.x * rippleFreq + ripplePhase.x) *
-      Math.sin(dir.y * rippleFreq * 1.3 + ripplePhase.y) *
-      Math.sin(dir.z * rippleFreq * 0.7 + ripplePhase.z)
-
-    // Cone/sphere poles are several coincident vertices sharing one position
-    // but pointing in different directions (needed for smooth shading) — full
-    // per-normal displacement there would tear a single tip into a spiky
-    // star. Fade displacement out near the central vertical axis instead.
-    const radialDist = Math.sqrt(v.x * v.x + v.z * v.z)
-    offset *= Math.min(1, radialDist / 0.12)
-
-    v.addScaledVector(n, offset)
-    position.setXYZ(i, v.x, v.y, v.z)
-  }
-
-  position.needsUpdate = true
-  geometry.computeVertexNormals()
-  return geometry
-}
-
-function useDishGeometry(shape, seedStr) {
-  const geometry = useMemo(() => {
-    const geo = baseGeometryFor(shape)
-    const bumpScale = (SHAPE_GEOMETRY[shape] || SHAPE_GEOMETRY.sphere).bumpScale
-    return makeLumpy(geo, seedStr, bumpScale)
-  }, [shape, seedStr])
-
-  useEffect(() => () => geometry.dispose(), [geometry])
-
-  return geometry
-}
-
-/** Deterministic (not per-frame-random) spin offset so same-shape dishes don't look identical. */
-function hashSpin(seed) {
-  const normalized = ((hashSeed(seed) % 360) + 360) % 360
-  return (normalized * Math.PI) / 180
-}
-
-function ProceduralDish({ shape, accent }) {
-  const config = SHAPE_CONFIG[shape] || SHAPE_CONFIG.sphere
-  const seedStr = `${shape}-${accent}`
-  const geometry = useDishGeometry(shape, seedStr)
-  const spin = useMemo(() => hashSpin(seedStr), [seedStr])
-  const plateTopY = 0.06
-  const meshY = plateTopY + config.height / 2 + 0.04
-  const rotation = [config.baseRotation[0], config.baseRotation[1] + spin, config.baseRotation[2]]
-
-  return (
-    <mesh geometry={geometry} position={[0, meshY, 0]} rotation={rotation} castShadow receiveShadow>
-      <meshStandardMaterial color={accent} roughness={0.65} metalness={0} />
-    </mesh>
-  )
-}
 
 // Auto-fit (center + scale-to-1.5-units + rest-on-plate-at-bounding-box-min)
-// looks right for a simple convex model like the avocado half. A splayed,
-// non-convex model like the peeled orange has its true lowest point out on a
-// stray curl of peel, off to the side of the visual mass — grounding on that
+// looks right for most models. A splayed, non-convex composition can have its
+// true lowest point off to the side of the visual mass — grounding on that
 // technically-correct but visually-misleading point reads as floating. Rather
 // than build general-purpose "resting point" detection for arbitrary meshes,
-// nudge those specific known cases down by hand.
-const GLTF_REST_NUDGE = {
-  '/models/mandarin-orange/MandarinOrange.gltf': -0.32,
-}
+// nudge those specific known cases down by hand as they come up.
+const GLTF_REST_NUDGE = {}
 
 /** Loads a real glTF model, auto-centered and scaled to sit consistently on the plate. */
 function GltfDish({ url }) {
@@ -210,72 +66,177 @@ function GltfDish({ url }) {
   )
 }
 
-function Dish({ shape, accent, gltfUrl }) {
-  const proceduralFallback = <ProceduralDish shape={shape} accent={accent} />
+/** Soft radial-gradient billboard, generated once on a canvas — gives steam a wispy falloff instead of a solid ball's hard edge. */
+function useSoftParticleTexture() {
+  return useMemo(() => {
+    const size = 64
+    const canvas = document.createElement('canvas')
+    canvas.width = canvas.height = size
+    const ctx = canvas.getContext('2d')
+    const gradient = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2)
+    gradient.addColorStop(0, 'rgba(255,255,255,0.85)')
+    gradient.addColorStop(0.5, 'rgba(255,255,255,0.3)')
+    gradient.addColorStop(1, 'rgba(255,255,255,0)')
+    ctx.fillStyle = gradient
+    ctx.fillRect(0, 0, size, size)
+    return new THREE.CanvasTexture(canvas)
+  }, [])
+}
+
+/** A handful of soft, rising wisps — each loops up and fades rather than needing a real particle system. */
+function Steam({ seed }) {
+  const texture = useSoftParticleTexture()
+  const rand = useMemo(() => mulberry32(hashSeed(seed) >>> 0), [seed])
+  const wisps = useMemo(
+    () =>
+      Array.from({ length: 3 }, () => ({
+        x: (rand() - 0.5) * 0.3,
+        z: (rand() - 0.5) * 0.3,
+        speed: 0.22 + rand() * 0.1,
+        phase: rand() * 10,
+        drift: (rand() - 0.5) * 0.2,
+      })),
+    [rand],
+  )
+  const refs = useRef([])
+
+  useFrame((state) => {
+    const t = state.clock.elapsedTime
+    wisps.forEach((w, i) => {
+      const sprite = refs.current[i]
+      if (!sprite) return
+      const progress = ((t * w.speed + w.phase) % 1.6) / 1.6
+      sprite.position.set(w.x + Math.sin(t * 0.6 + w.phase) * w.drift * progress, 0.36 + progress * 0.3, w.z)
+      sprite.scale.setScalar(0.1 + progress * 0.16)
+      sprite.material.opacity = Math.sin(progress * Math.PI) * 0.09
+    })
+  })
 
   return (
-    <group>
-      {/* plate */}
-      <mesh position={[0, 0, 0]} receiveShadow castShadow>
-        <cylinderGeometry args={[1.3, 1.35, 0.12, 64]} />
-        <meshStandardMaterial color="#2a2a2a" roughness={0.55} metalness={0.25} />
-      </mesh>
-      {/* dish — a real model if this item has one, the procedural mound otherwise
-          (and as the fallback while a real model is still loading, or if it fails) */}
-      {gltfUrl ? (
-        <ThreeErrorBoundary fallback={proceduralFallback}>
-          <Suspense fallback={proceduralFallback}>
-            <GltfDish url={gltfUrl} />
-          </Suspense>
-        </ThreeErrorBoundary>
-      ) : (
-        proceduralFallback
-      )}
+    <>
+      {wisps.map((w, i) => (
+        <sprite key={i} ref={(el) => (refs.current[i] = el)}>
+          <spriteMaterial map={texture} color="#fff8ec" transparent opacity={0} depthWrite={false} />
+        </sprite>
+      ))}
+    </>
+  )
+}
+
+/** A couple of small herb-leaf flecks, gently bobbing — plating garnish rather than the dish itself. */
+function FloatingGarnish({ seed, reducedMotion }) {
+  const rand = useMemo(() => mulberry32((hashSeed(seed) >>> 0) + 7), [seed])
+  const leaves = useMemo(
+    () =>
+      Array.from({ length: 3 }, () => ({
+        angle: rand() * Math.PI * 2,
+        radius: 0.75 + rand() * 0.35,
+        height: 0.35 + rand() * 0.3,
+        speed: 0.3 + rand() * 0.2,
+        phase: rand() * 10,
+        spin: rand() * Math.PI,
+      })),
+    [rand],
+  )
+  const refs = useRef([])
+
+  useFrame((state) => {
+    const t = reducedMotion ? 0 : state.clock.elapsedTime
+    leaves.forEach((leaf, i) => {
+      const mesh = refs.current[i]
+      if (!mesh) return
+      mesh.position.set(Math.cos(leaf.angle) * leaf.radius, leaf.height + Math.sin(t * leaf.speed + leaf.phase) * 0.05, Math.sin(leaf.angle) * leaf.radius)
+      mesh.rotation.set(Math.PI / 2, leaf.spin + t * 0.15, 0)
+    })
+  })
+
+  return (
+    <>
+      {leaves.map((leaf, i) => (
+        <mesh key={i} ref={(el) => (refs.current[i] = el)} castShadow>
+          <circleGeometry args={[0.06, 6]} />
+          <meshStandardMaterial color="#4a7a3f" roughness={0.7} side={THREE.DoubleSide} />
+        </mesh>
+      ))}
+    </>
+  )
+}
+
+/** Springs the dish in from a slightly smaller/lower rest on mount — a settle, not a fly-in. */
+function MountSpring({ children, disabled }) {
+  const groupRef = useRef(null)
+  const start = useRef(null)
+
+  useFrame((state) => {
+    if (disabled || !groupRef.current) return
+    if (start.current === null) start.current = state.clock.elapsedTime
+    const elapsed = state.clock.elapsedTime - start.current
+    const t = Math.min(elapsed / 0.9, 1)
+    if (t >= 1) {
+      groupRef.current.scale.setScalar(1)
+      return
+    }
+    // easeOutBack — settles with a touch of overshoot, like a plate set down by hand.
+    const c1 = 1.4
+    const c3 = c1 + 1
+    const eased = 1 + c3 * (t - 1) ** 3 + c1 * (t - 1) ** 2
+    groupRef.current.scale.setScalar(0.82 + eased * 0.18)
+  })
+
+  return (
+    <group ref={groupRef} scale={disabled ? 1 : 0.82}>
+      {children}
     </group>
   )
 }
 
-function hasWebGL() {
-  try {
-    const canvas = document.createElement('canvas')
-    return !!(canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-  } catch {
-    return false
-  }
-}
+function Dish({ shape, accent, gltfUrl, seed, showSteam, reducedMotion }) {
+  const proceduralFallback = <ProceduralDish shape={shape} accent={accent} />
 
-class ThreeErrorBoundary extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true }
-  }
-
-  componentDidCatch(error) {
-    // eslint-disable-next-line no-console
-    console.error('ThreeViewer failed to render:', error)
-  }
-
-  render() {
-    if (this.state.hasError) return this.props.fallback
-    return this.props.children
-  }
+  return (
+    <MountSpring disabled={reducedMotion}>
+      <group>
+        {/* plate */}
+        <mesh position={[0, 0, 0]} receiveShadow castShadow>
+          <cylinderGeometry args={[1.3, 1.35, 0.12, 64]} />
+          <meshStandardMaterial color="#2a2a2a" roughness={0.55} metalness={0.25} />
+        </mesh>
+        {/* dish — a real model if this item has one, the procedural mound otherwise
+            (and as the fallback while a real model is still loading, or if it fails) */}
+        {gltfUrl ? (
+          <ThreeErrorBoundary fallback={proceduralFallback}>
+            <Suspense fallback={proceduralFallback}>
+              <GltfDish url={gltfUrl} />
+            </Suspense>
+          </ThreeErrorBoundary>
+        ) : (
+          proceduralFallback
+        )}
+        <FloatingGarnish seed={seed} reducedMotion={reducedMotion} />
+        {showSteam && !reducedMotion && <Steam seed={seed} />}
+      </group>
+    </MountSpring>
+  )
 }
 
 export function ThreeViewer({
   shape = 'sphere',
   accent = '#d4af37',
   gltfUrl = null,
+  category = null,
+  dishId = null,
   fallbackImage,
   fallbackAlt = '',
   autoRotate = true,
   className = '',
 }) {
   const { prefersReducedMotion } = useTheme()
+  const isDesktop = useIsDesktop()
   const [webglOk] = useState(() => hasWebGL())
+  const seed = `${dishId ?? ''}-${shape}-${accent}`
+  const nameLower = fallbackAlt.toLowerCase()
+  const isColdDish = COLD_DISH_KEYWORDS.some((word) => nameLower.includes(word))
+  const showSteam = !isColdDish && (category ? !NO_STEAM_CATEGORIES.has(category) : true)
 
   const fallback = (
     <div className={styles.fallback}>
@@ -295,8 +256,28 @@ export function ThreeViewer({
             <ambientLight intensity={0.15} />
             <directionalLight position={[3, 5, 2]} intensity={1.3} color="#fff4e0" castShadow shadow-mapSize={[1024, 1024]} />
             <pointLight position={[-3, 1.4, -1.6]} intensity={1.6} color={accent} />
+            <pointLight position={[0, 1.9, -2.6]} intensity={0.55} color="#bcd4ff" />
 
-            <Dish shape={shape} accent={accent} gltfUrl={gltfUrl} />
+            <Dish shape={shape} accent={accent} gltfUrl={gltfUrl} seed={seed} showSteam={showSteam} reducedMotion={prefersReducedMotion} />
+
+            {isDesktop && (
+              <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.09, 0]}>
+                <planeGeometry args={[8, 8]} />
+                <MeshReflectorMaterial
+                  blur={[300, 100]}
+                  resolution={512}
+                  mixBlur={1}
+                  mixStrength={25}
+                  roughness={1}
+                  depthScale={1}
+                  minDepthThreshold={0.4}
+                  maxDepthThreshold={1.2}
+                  color="#0c0c0c"
+                  metalness={0.4}
+                  mirror={0.25}
+                />
+              </mesh>
+            )}
 
             <Suspense fallback={null}>
               <Environment preset="night" />
@@ -312,6 +293,12 @@ export function ThreeViewer({
               minPolarAngle={Math.PI / 4}
               maxPolarAngle={Math.PI / 2.1}
             />
+
+            {isDesktop && (
+              <EffectComposer>
+                <DepthOfField focusDistance={0.004} focalLength={0.02} bokehScale={0.7} height={480} />
+              </EffectComposer>
+            )}
           </Canvas>
         </div>
       </ThreeErrorBoundary>

@@ -5,12 +5,12 @@
     "category": "Appetizers",
     "price": 22,
     "veg": true,
-    "description": "Truffle Burrata Crostini — a signature composition of burrata and black truffle, finished tableside for a refined, seasonal expression of the dish.",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=70&auto=format&fit=crop",
+    "description": "Truffle Burrata Crostini \u2014 a signature composition of burrata and black truffle, finished tableside for a refined, seasonal expression of the dish.",
+    "image": "https://images.unsplash.com/photo-1760390952135-8814027edfb0?w=800&h=600&q=70&auto=format&fit=crop&crop=bottom",
     "model3d": {
       "shape": "sphere",
       "accent": "#ff7a3d",
-      "gltf": null
+      "gltf": "/models/truffle-burrata-crostini/TruffleBurrataCrostini.gltf"
     },
     "nutrition": {
       "calories": 404,
@@ -38,14 +38,14 @@
         "id": "1-r1",
         "author": "Talia G.",
         "rating": 4,
-        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "comment": "A memorable dish \u2014 the kind that makes you rebook the table.",
         "date": "2026-02-11"
       },
       {
         "id": "1-r2",
         "author": "Owen C.",
         "rating": 4,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-01-12"
       }
     ],
@@ -54,7 +54,8 @@
     "popular": false,
     "isNew": false,
     "prepTime": 12,
-    "cookingTime": 36
+    "cookingTime": 36,
+    "video": "/videos/truffle-burrata-crostini/placeholder.mp4"
   },
   {
     "id": 2,
@@ -62,12 +63,12 @@
     "category": "Appetizers",
     "price": 26,
     "veg": false,
-    "description": "Seared Scallop Ceviche — a signature composition of scallops and lime, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Seared Scallop Ceviche \u2014 a signature composition of scallops and lime, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
       "accent": "#c98a3e",
-      "gltf": "/models/avocado/Avocado.gltf"
+      "gltf": "/models/seared-scallop-ceviche/SearedScallopCeviche.gltf"
     },
     "nutrition": {
       "calories": 795,
@@ -125,7 +126,7 @@
     "category": "Appetizers",
     "price": 28,
     "veg": false,
-    "description": "Wagyu Beef Tartare — a signature composition of wagyu beef and quail egg, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Wagyu Beef Tartare \u2014 a signature composition of wagyu beef and quail egg, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
@@ -156,7 +157,7 @@
         "id": "3-r1",
         "author": "Freya A.",
         "rating": 4,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-05-03"
       },
       {
@@ -180,7 +181,7 @@
     "category": "Appetizers",
     "price": 24,
     "veg": false,
-    "description": "Charred Octopus & Chorizo — a signature composition of octopus and chorizo, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Charred Octopus & Chorizo \u2014 a signature composition of octopus and chorizo, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -220,7 +221,7 @@
         "id": "4-r2",
         "author": "Isaac W.",
         "rating": 5,
-        "comment": "The texture was spot on — crisp outside, tender within.",
+        "comment": "The texture was spot on \u2014 crisp outside, tender within.",
         "date": "2026-04-18"
       }
     ],
@@ -237,7 +238,7 @@
     "category": "Soups & Salads",
     "price": 18,
     "veg": true,
-    "description": "Roasted Beet & Goat Cheese — a signature composition of golden beets and goat cheese, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Roasted Beet & Goat Cheese \u2014 a signature composition of golden beets and goat cheese, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1600335895229-6e75511892c8?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
@@ -268,7 +269,7 @@
         "id": "5-r1",
         "author": "Amara N.",
         "rating": 4,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-07-03"
       },
       {
@@ -292,7 +293,7 @@
     "category": "Soups & Salads",
     "price": 16,
     "veg": true,
-    "description": "Wild Mushroom Bisque — a signature composition of porcini and cream, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Wild Mushroom Bisque \u2014 a signature composition of porcini and cream, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -354,7 +355,7 @@
     "category": "Soups & Salads",
     "price": 19,
     "veg": true,
-    "description": "Heirloom Tomato Burrata Salad — a signature composition of heirloom tomato and burrata, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Heirloom Tomato Burrata Salad \u2014 a signature composition of heirloom tomato and burrata, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
@@ -418,7 +419,7 @@
     "category": "Soups & Salads",
     "price": 21,
     "veg": false,
-    "description": "Lobster Bisque — a signature composition of lobster and cognac, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Lobster Bisque \u2014 a signature composition of lobster and cognac, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -449,7 +450,7 @@
         "id": "8-r1",
         "author": "Kenji T.",
         "rating": 3.5,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-01-03"
       },
       {
@@ -473,7 +474,7 @@
     "category": "Main Course",
     "price": 46,
     "veg": false,
-    "description": "Herb-Crusted Rack of Lamb — a signature composition of lamb rack and rosemary, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Herb-Crusted Rack of Lamb \u2014 a signature composition of lamb rack and rosemary, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1631515242808-497c3fbd3972?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
@@ -504,7 +505,7 @@
         "id": "9-r1",
         "author": "Elena V.",
         "rating": 5,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-05-15"
       },
       {
@@ -528,7 +529,7 @@
     "category": "Main Course",
     "price": 52,
     "veg": false,
-    "description": "Filet Mignon with Bordelaise — a signature composition of beef filet and bordelaise sauce, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Filet Mignon with Bordelaise \u2014 a signature composition of beef filet and bordelaise sauce, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -567,7 +568,7 @@
         "id": "10-r2",
         "author": "Elena V.",
         "rating": 4.5,
-        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "comment": "A memorable dish \u2014 the kind that makes you rebook the table.",
         "date": "2026-06-08"
       }
     ],
@@ -584,7 +585,7 @@
     "category": "Main Course",
     "price": 42,
     "veg": false,
-    "description": "Miso-Glazed Black Cod — a signature composition of black cod and white miso, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Miso-Glazed Black Cod \u2014 a signature composition of black cod and white miso, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -642,16 +643,16 @@
   },
   {
     "id": 12,
-    "name": "Duck Breast à l'Orange",
+    "name": "Duck Breast \u00e0 l'Orange",
     "category": "Main Course",
     "price": 38,
     "veg": false,
-    "description": "Duck Breast à l'Orange — a signature composition of duck breast and orange, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Duck Breast \u00e0 l'Orange \u2014 a signature composition of duck breast and orange, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
       "accent": "#c98a3e",
-      "gltf": "/models/mandarin-orange/MandarinOrange.gltf"
+      "gltf": "/models/duck-breast-a-lorange/DuckBreastAlOrange.gltf"
     },
     "nutrition": {
       "calories": 705,
@@ -709,7 +710,7 @@
     "category": "Main Course",
     "price": 34,
     "veg": true,
-    "description": "Wild Mushroom Wellington — a signature composition of puff pastry and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Wild Mushroom Wellington \u2014 a signature composition of puff pastry and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -771,7 +772,7 @@
     "category": "Pasta & Risotto",
     "price": 32,
     "veg": false,
-    "description": "Saffron Risotto al Nero — a signature composition of squid ink and saffron, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Saffron Risotto al Nero \u2014 a signature composition of squid ink and saffron, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -810,7 +811,7 @@
         "id": "14-r2",
         "author": "Kenji T.",
         "rating": 4,
-        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "comment": "A memorable dish \u2014 the kind that makes you rebook the table.",
         "date": "2026-04-20"
       }
     ],
@@ -827,7 +828,7 @@
     "category": "Pasta & Risotto",
     "price": 36,
     "veg": true,
-    "description": "Truffle Tagliatelle — a signature composition of tagliatelle and black truffle, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Truffle Tagliatelle \u2014 a signature composition of tagliatelle and black truffle, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
@@ -858,7 +859,7 @@
         "id": "15-r1",
         "author": "Freya A.",
         "rating": 3.5,
-        "comment": "The texture was spot on — crisp outside, tender within.",
+        "comment": "The texture was spot on \u2014 crisp outside, tender within.",
         "date": "2026-01-21"
       },
       {
@@ -882,7 +883,7 @@
     "category": "Pasta & Risotto",
     "price": 29,
     "veg": true,
-    "description": "Wild Mushroom Risotto — a signature composition of arborio rice and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Wild Mushroom Risotto \u2014 a signature composition of arborio rice and wild mushroom, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -913,7 +914,7 @@
         "id": "16-r1",
         "author": "Freya A.",
         "rating": 4.5,
-        "comment": "The texture was spot on — crisp outside, tender within.",
+        "comment": "The texture was spot on \u2014 crisp outside, tender within.",
         "date": "2026-05-21"
       },
       {
@@ -937,7 +938,7 @@
     "category": "Pasta & Risotto",
     "price": 39,
     "veg": false,
-    "description": "Lobster Ravioli — a signature composition of lobster and ricotta, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Lobster Ravioli \u2014 a signature composition of lobster and ricotta, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -999,7 +1000,7 @@
     "category": "Pasta & Risotto",
     "price": 30,
     "veg": true,
-    "description": "Butternut Squash Agnolotti — a signature composition of butternut squash and sage, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Butternut Squash Agnolotti \u2014 a signature composition of butternut squash and sage, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -1061,7 +1062,7 @@
     "category": "Seafood",
     "price": 44,
     "veg": false,
-    "description": "Pan-Seared Chilean Sea Bass — a signature composition of sea bass and beurre blanc, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Pan-Seared Chilean Sea Bass \u2014 a signature composition of sea bass and beurre blanc, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -1092,7 +1093,7 @@
         "id": "19-r1",
         "author": "Freya A.",
         "rating": 4,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-06-15"
       },
       {
@@ -1116,7 +1117,7 @@
     "category": "Seafood",
     "price": 36,
     "veg": false,
-    "description": "Grilled Tiger Prawns — a signature composition of tiger prawns and garlic butter, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Grilled Tiger Prawns \u2014 a signature composition of tiger prawns and garlic butter, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -1178,7 +1179,7 @@
     "category": "Seafood",
     "price": 58,
     "veg": false,
-    "description": "Maine Lobster Thermidor — a signature composition of lobster and brandy cream, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Maine Lobster Thermidor \u2014 a signature composition of lobster and brandy cream, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -1195,7 +1196,7 @@
     "ingredients": [
       "Lobster",
       "Brandy cream",
-      "Gruyère",
+      "Gruy\u00e8re",
       "Mustard",
       "Tarragon"
     ],
@@ -1241,7 +1242,7 @@
     "category": "Seafood",
     "price": 32,
     "veg": false,
-    "description": "Seared Ahi Tuna — a signature composition of ahi tuna and sesame crust, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Seared Ahi Tuna \u2014 a signature composition of ahi tuna and sesame crust, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -1274,14 +1275,14 @@
         "id": "22-r1",
         "author": "Diego M.",
         "rating": 4.5,
-        "comment": "A memorable dish — the kind that makes you rebook the table.",
+        "comment": "A memorable dish \u2014 the kind that makes you rebook the table.",
         "date": "2026-07-11"
       },
       {
         "id": "22-r2",
         "author": "Priya S.",
         "rating": 4.5,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-06-12"
       }
     ],
@@ -1298,7 +1299,7 @@
     "category": "Grill & BBQ",
     "price": 48,
     "veg": false,
-    "description": "Smoked Wagyu Short Rib — a signature composition of wagyu short rib and smoked paprika, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Smoked Wagyu Short Rib \u2014 a signature composition of wagyu short rib and smoked paprika, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "cone",
@@ -1360,7 +1361,7 @@
     "category": "Grill & BBQ",
     "price": 56,
     "veg": false,
-    "description": "Applewood Grilled Ribeye — a signature composition of ribeye and applewood smoke, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Applewood Grilled Ribeye \u2014 a signature composition of ribeye and applewood smoke, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1432139509613-5c4255815697?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -1399,7 +1400,7 @@
         "id": "24-r2",
         "author": "Mei L.",
         "rating": 4.5,
-        "comment": "The texture was spot on — crisp outside, tender within.",
+        "comment": "The texture was spot on \u2014 crisp outside, tender within.",
         "date": "2026-03-06"
       }
     ],
@@ -1416,7 +1417,7 @@
     "category": "Grill & BBQ",
     "price": 28,
     "veg": false,
-    "description": "Charcoal Grilled Chicken — a signature composition of chicken and charcoal grill, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Charcoal Grilled Chicken \u2014 a signature composition of chicken and charcoal grill, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "torus",
@@ -1477,7 +1478,7 @@
     "category": "Grill & BBQ",
     "price": 24,
     "veg": true,
-    "description": "Smoked Portobello Steak — a signature composition of portobello and smoked salt, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Smoked Portobello Steak \u2014 a signature composition of portobello and smoked salt, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
@@ -1539,7 +1540,7 @@
     "category": "Desserts",
     "price": 16,
     "veg": true,
-    "description": "Valrhona Chocolate Fondant — a signature composition of valrhona chocolate and vanilla bean ice cream, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Valrhona Chocolate Fondant \u2014 a signature composition of valrhona chocolate and vanilla bean ice cream, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "sphere",
@@ -1596,11 +1597,11 @@
   },
   {
     "id": 28,
-    "name": "Crème Brûlée",
+    "name": "Cr\u00e8me Br\u00fbl\u00e9e",
     "category": "Desserts",
     "price": 14,
     "veg": true,
-    "description": "Crème Brûlée — a signature composition of vanilla bean and cream, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Cr\u00e8me Br\u00fbl\u00e9e \u2014 a signature composition of vanilla bean and cream, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "dome",
@@ -1630,7 +1631,7 @@
         "id": "28-r1",
         "author": "Amara N.",
         "rating": 4,
-        "comment": "An absolute triumph — every element on the plate earned its place.",
+        "comment": "An absolute triumph \u2014 every element on the plate earned its place.",
         "date": "2026-06-15"
       },
       {
@@ -1654,7 +1655,7 @@
     "category": "Desserts",
     "price": 15,
     "veg": true,
-    "description": "Deconstructed Tiramisu — a signature composition of mascarpone and espresso, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Deconstructed Tiramisu \u2014 a signature composition of mascarpone and espresso, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1607478900766-efe13248b125?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",
@@ -1717,7 +1718,7 @@
     "category": "Beverages",
     "price": 19,
     "veg": true,
-    "description": "Golden Saffron Old Fashioned — a signature composition of bourbon and saffron syrup, finished tableside for a refined, seasonal expression of the dish.",
+    "description": "Golden Saffron Old Fashioned \u2014 a signature composition of bourbon and saffron syrup, finished tableside for a refined, seasonal expression of the dish.",
     "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=70&auto=format&fit=crop",
     "model3d": {
       "shape": "ring",

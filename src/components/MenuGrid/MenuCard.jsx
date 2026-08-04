@@ -33,7 +33,7 @@ export function MenuCard({ item, isFavorite, onToggleFavorite }) {
       animate="rest"
     >
       <Link to={`/menu/${item.id}`} className={styles.link}>
-        <div className={styles.imageWrap}>
+        <motion.div className={styles.imageWrap} layoutId={prefersReducedMotion ? undefined : `dish-media-${item.id}`}>
           <motion.div className={styles.imageInner} variants={prefersReducedMotion ? undefined : imageZoom}>
             <OptimizedImage src={item.image} alt={item.name} aspectRatio="4 / 3" imgClassName={styles.image} />
           </motion.div>
@@ -58,7 +58,7 @@ export function MenuCard({ item, isFavorite, onToggleFavorite }) {
               <Badge tone={badge.tone}>{badge.label}</Badge>
             </div>
           )}
-        </div>
+        </motion.div>
 
         <div className={styles.body}>
           <h2 className={styles.name}>{item.name}</h2>

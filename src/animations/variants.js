@@ -42,15 +42,21 @@ export const imageZoom = {
 
 export const buttonTap = { scale: 0.96 }
 
+/** Springy mount-in for small persistent chrome — badges, indicator dots, icon marks. */
+export const popIn = {
+  hidden: { opacity: 0, scale: 0.5 },
+  show: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 420, damping: 22 } },
+}
+
 /** Viewport options for scroll-reveal `whileInView` usage. */
 export const revealOnce = { once: true, amount: 0.25 }
 
-/** Standard page transition, consumed by src/layout/Layout.jsx. */
+/** Standard page transition, consumed by src/layout/Layout.jsx. A soft blur alongside the fade/rise reads less like a slide and more like a camera settling on the next scene. */
 export const pageTransition = {
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -16 },
-  transition: { duration: 0.42, ease: easeLuxury },
+  initial: { opacity: 0, y: 16, filter: 'blur(6px)' },
+  animate: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  exit: { opacity: 0, y: -16, filter: 'blur(6px)' },
+  transition: { duration: 0.48, ease: easeLuxury },
 }
 
 /** Returns motion-safe props: pass `disabled` (prefersReducedMotion) to strip animation. */

@@ -1,15 +1,11 @@
 import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, LayoutGroup, motion } from 'framer-motion'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { AmbientAtmosphere } from '../components/AmbientAtmosphere/AmbientAtmosphere'
+import { pageTransition } from '../animations'
 import { useTheme } from '../theme/ThemeProvider'
-
-const pageVariants = {
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -16 },
-}
 
 export function Layout() {
   const location = useLocation()
@@ -27,21 +23,23 @@ export function Layout() {
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
+      <AmbientAtmosphere />
       <Header />
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.main
-          key={location.pathname}
-          id="main-content"
-          tabIndex={-1}
-          variants={prefersReducedMotion ? undefined : pageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <Outlet />
-        </motion.main>
-      </AnimatePresence>
+      <LayoutGroup>
+        <AnimatePresence mode="popLayout" initial={false}>
+          <motion.main
+            key={location.pathname}
+            id="main-content"
+            tabIndex={-1}
+            initial={prefersReducedMotion ? false : pageTransition.initial}
+            animate={prefersReducedMotion ? {} : pageTransition.animate}
+            exit={prefersReducedMotion ? {} : pageTransition.exit}
+            transition={pageTransition.transition}
+          >
+            <Outlet />
+          </motion.main>
+        </AnimatePresence>
+      </LayoutGroup>
       <Footer />
     </>
   )

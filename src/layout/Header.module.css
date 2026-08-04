@@ -38,6 +38,10 @@
   color: var(--color-gold-soft);
 }
 
+.brandIcon {
+  display: inline-flex;
+}
+
 .nav {
   display: none;
   align-items: center;
@@ -80,9 +84,20 @@
   color: var(--color-text);
 }
 
-.link:hover::after,
-.active::after {
+.link:hover::after {
   transform: scaleX(1);
+}
+
+/* Active-state underline is the animated .underline span (layoutId-shared
+   in Header.jsx) instead of this pseudo-element, so it can slide between
+   nav links on route change rather than just fading in place. */
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--gradient-gold);
 }
 
 .menuBtn {

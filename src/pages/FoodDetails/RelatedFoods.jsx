@@ -28,7 +28,7 @@ export function RelatedFoods({ item }) {
   const itemMotion = prefersReducedMotion ? {} : { variants: fadeInUp }
 
   return (
-    <section className={[styles.section, 'container'].join(' ')}>
+    <section id="related-dishes" className={[styles.section, 'container'].join(' ')}>
       <p className="eyebrow">You Might Also Like</p>
       <h2 className={styles.title}>Related Dishes</h2>
 

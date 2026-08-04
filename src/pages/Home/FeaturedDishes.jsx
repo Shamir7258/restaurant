@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Card, Badge, Rating, OptimizedImage, Button } from '../../components/ui'
 import { fadeInUp, staggerContainer, revealOnce, imageZoom } from '../../animations'
+import { useTheme } from '../../theme/ThemeProvider'
 import menuData from '../../data/menu.json'
 import styles from './FeaturedDishes.module.css'
 
@@ -15,6 +16,8 @@ function pickFeatured() {
 const FEATURED = pickFeatured()
 
 export function FeaturedDishes() {
+  const { prefersReducedMotion } = useTheme()
+
   return (
     <section className={[styles.section, 'container'].join(' ')}>
       <div className={styles.heading}>
@@ -28,8 +31,14 @@ export function FeaturedDishes() {
           <motion.div key={item.id} variants={fadeInUp}>
             <Link to={`/menu/${item.id}`} className={styles.cardLink}>
               <Card glass className={styles.card}>
-                <motion.div className={styles.imageWrap} initial="rest" whileHover="hover" animate="rest">
-                  <motion.div variants={imageZoom}>
+                <motion.div
+                  className={styles.imageWrap}
+                  layoutId={prefersReducedMotion ? undefined : `dish-media-${item.id}`}
+                  initial="rest"
+                  whileHover={prefersReducedMotion ? undefined : 'hover'}
+                  animate="rest"
+                >
+                  <motion.div variants={prefersReducedMotion ? undefined : imageZoom}>
                     <OptimizedImage src={item.image} alt={item.name} aspectRatio="4 / 3" />
                   </motion.div>
                   <div className={styles.badges}>

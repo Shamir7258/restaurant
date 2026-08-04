@@ -43,7 +43,9 @@ export function MenuListItem({ item, isFavorite, onToggleFavorite }) {
       exit={prefersReducedMotion ? undefined : 'exit'}
     >
       <Link to={detailsHref} className={styles.thumbLink}>
-        <OptimizedImage src={item.image} alt={item.name} aspectRatio="4 / 3" className={styles.thumbWrap} />
+        <motion.div className={styles.thumbMotion} layoutId={prefersReducedMotion ? undefined : `dish-media-${item.id}`}>
+          <OptimizedImage src={item.image} alt={item.name} aspectRatio="4 / 3" className={styles.thumbWrap} />
+        </motion.div>
         {badges.length > 0 && (
           <div className={styles.badgeRow}>
             {badges.map((badge) => (
@@ -100,7 +102,7 @@ export function MenuListItem({ item, isFavorite, onToggleFavorite }) {
             <span className={styles.price}>${item.price}</span>
           </div>
 
-          <Button as={Link} to={detailsHref} variant="secondary" size="sm">
+          <Button as={Link} to={detailsHref} variant="secondary" size="sm" className={styles.detailsBtn}>
             View Details
           </Button>
         </div>

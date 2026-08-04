@@ -1,8 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
-import { Button } from '../../components/ui'
+import { Button, FoodShowcase } from '../../components/ui'
 import menuData from '../../data/menu.json'
-import { Hero } from './Hero'
-import { InfoPanel } from './InfoPanel'
 import { RelatedFoods } from './RelatedFoods'
 import styles from './FoodDetails.module.css'
 
@@ -25,8 +23,7 @@ export function FoodDetails() {
 
   return (
     <div className={styles.page}>
-      <Hero item={item} />
-      <InfoPanel item={item} />
+      <FoodShowcase item={item} />
       <RelatedFoods item={item} />
     </div>
   )

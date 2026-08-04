@@ -7,8 +7,17 @@ import { ViewToggle } from '../../components/ViewToggle/ViewToggle'
 import { useFavorites } from '../../hooks/useFavorites'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useTheme } from '../../theme/ThemeProvider'
-import { fadeInUp } from '../../animations'
+import { easeLuxury, easeOut } from '../../animations'
 import styles from './Menu.module.css'
+
+// A focus-pull crossfade for the grid<->list swap — kept separate from the
+// per-card stagger (MenuGrid/MenuList already animate their own children in),
+// so the container itself isn't also fighting them with its own y-shift.
+const viewTransition = {
+  hidden: { opacity: 0, scale: 0.985, filter: 'blur(4px)' },
+  show: { opacity: 1, scale: 1, filter: 'blur(0px)', transition: { duration: 0.42, ease: easeLuxury } },
+  exit: { opacity: 0, scale: 0.985, filter: 'blur(4px)', transition: { duration: 0.22, ease: easeOut } },
+}
 
 export function Menu() {
   const { prefersReducedMotion } = useTheme()
@@ -44,10 +53,10 @@ export function Menu() {
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={view}
-            variants={prefersReducedMotion ? undefined : fadeInUp}
+            variants={prefersReducedMotion ? undefined : viewTransition}
             initial={prefersReducedMotion ? undefined : 'hidden'}
             animate={prefersReducedMotion ? undefined : 'show'}
-            exit={prefersReducedMotion ? undefined : { opacity: 0, transition: { duration: 0.2 } }}
+            exit={prefersReducedMotion ? undefined : 'exit'}
           >
             <ListComponent items={filteredItems} isFavorite={isFavorite} onToggleFavorite={toggleFavorite} />
           </motion.div>

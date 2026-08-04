@@ -1,7 +1,7 @@
 .row {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -19,12 +19,6 @@
   border-color: rgba(212, 175, 55, 0.4);
 }
 
-@media (min-width: 640px) {
-  .row {
-    flex-direction: row;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .row:hover,
   .row:focus-within {
@@ -33,13 +27,22 @@
 }
 
 /* ---- Thumbnail ---- */
+/* Row layout (not a stacked full-width image) at every width, including
+   mobile, so switching grid<->list actually looks different on a phone —
+   only the thumbnail's size grows with viewport. */
 .thumbLink {
   position: relative;
   display: block;
   flex-shrink: 0;
-  width: 100%;
+  width: 96px;
   color: inherit;
   text-decoration: none;
+}
+
+@media (min-width: 480px) {
+  .thumbLink {
+    width: 130px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -52,6 +55,11 @@
   .thumbLink {
     width: 320px;
   }
+}
+
+.thumbMotion {
+  width: 100%;
+  height: 100%;
 }
 
 .thumbWrap {
@@ -214,4 +222,46 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* A 96-130px-wide thumbnail is too tight for wrapped badge pills to sit
+   cleanly, and the fuller nutrition/description content just crowds a
+   compact row — trim to name, price, rating on the smallest screens. */
+@media (max-width: 639px) {
+  .badgeRow {
+    display: none;
+  }
+
+  .body {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-2);
+  }
+
+  .name {
+    font-size: var(--fs-md);
+  }
+
+  .description {
+    -webkit-line-clamp: 2;
+  }
+
+  .nutrition {
+    display: none;
+  }
+
+  .favoriteBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: var(--fs-lg);
+  }
+}
+
+@media (max-width: 479px) {
+  .detailsBtn {
+    display: none;
+  }
 }

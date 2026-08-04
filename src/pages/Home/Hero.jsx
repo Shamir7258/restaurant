@@ -22,7 +22,12 @@ export function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.bg} style={{ backgroundImage: `url(${HERO_IMAGE})` }} role="img" aria-label="Elegant fine-dining restaurant interior" />
+      <div
+        className={styles.bg}
+        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        role="img"
+        aria-label="Elegant fine-dining restaurant interior"
+      />
       <div className={styles.scrim} />
 
       <div className={[styles.content, 'container'].join(' ')}>
